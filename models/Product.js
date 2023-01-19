@@ -13,7 +13,12 @@ class Product {
             price: this.price,
             description: this.description
         }) 
-        return product   
+        return product  
+    };
+
+    static getProducts() {
+        const products = conn.db().collection('products').find().toArray();
+        return products;
     };
 };
 
