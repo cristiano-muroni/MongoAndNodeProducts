@@ -1,4 +1,4 @@
-<h1>Editar produto</h1>
+<h1>Editar produto{{product.price}}</h1>
 <form action="/products/edit" method="post">
 <input type="hidden" name="id" value="{{product._id}}">
     <div class="form-control">
@@ -11,11 +11,11 @@
     </div>
     <div class="form-control">
         <label for="price">Preço do produto</label>
-        <input type="text" image="price" placeholder="Digite o preço do produto" value="{{product.price}}">
-    </div>
+        <input type="text" name="price" placeholder="Digite o preço do produto" value="{{product.price}}">
+    </div>    
     <div class="form-control">
         <label for="description">Descrição</label>
-        <textarea name="description" placeholder="Descrição do produto">value="{{product.price}}"</textarea>
+        <textarea name="description" placeholder="Descrição do produto">{{product.description}}</textarea>
     </div>
     <input type="submit" value="Cadastrar" class="btn">
 </form>
